@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using MySql.Data.MySqlClient;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,27 @@ namespace Cnpj.Resources
             rs.Close();
             con.Close();
             con.Dispose();
+            command.Dispose();
+
+            return verificador;
+        }
+
+        public static int BuscacnpjMysql(MySqlConnection con, String cnpj)
+        {
+
+            int verificador = 0;
+            var sql = "SELECT COUNT(cnpj)as cnpj FROM basecnpj where cnpj ='" + cnpj + "'";
+            var command = new MySqlCommand(sql, con);
+            MySqlDataReader rs = command.ExecuteReader();
+
+            if (rs.HasRows)
+            {
+                while (rs.Read())
+                {
+                    verificador = rs.GetInt32(rs.GetOrdinal("cnpj"));
+                }
+            }
+            rs.Close();
             command.Dispose();
 
             return verificador;

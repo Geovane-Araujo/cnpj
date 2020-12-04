@@ -41,6 +41,7 @@
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.chekDb = new MetroFramework.Controls.MetroComboBox();
             this.Panel.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,12 +65,11 @@
             this.Panel.VerticalScrollbarBarColor = true;
             this.Panel.VerticalScrollbarHighlightOnWheel = false;
             this.Panel.VerticalScrollbarSize = 10;
-          
             // 
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.Black;
-            this.metroPanel1.BackgroundImage = global::Cnpj.Properties.Resources.earth_2254769_640;
+            this.metroPanel1.Controls.Add(this.chekDb);
             this.metroPanel1.Controls.Add(this.caminholog);
             this.metroPanel1.Controls.Add(this.metroLabel3);
             this.metroPanel1.Controls.Add(this.metroButton5);
@@ -136,7 +136,7 @@
             this.metroButton5.BackColor = System.Drawing.Color.Black;
             this.metroButton5.BackgroundImage = global::Cnpj.Properties.Resources.icons8_search_16px_1;
             this.metroButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton5.Location = new System.Drawing.Point(713, 96);
+            this.metroButton5.Location = new System.Drawing.Point(703, 96);
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(34, 23);
             this.metroButton5.Style = MetroFramework.MetroColorStyle.Black;
@@ -177,7 +177,7 @@
             // 
             // metroButton4
             // 
-            this.metroButton4.Location = new System.Drawing.Point(15, 178);
+            this.metroButton4.Location = new System.Drawing.Point(15, 279);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(732, 39);
             this.metroButton4.TabIndex = 5;
@@ -191,9 +191,9 @@
             this.metroButton3.BackColor = System.Drawing.Color.Black;
             this.metroButton3.BackgroundImage = global::Cnpj.Properties.Resources.icons8_search_16px_1;
             this.metroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton3.Location = new System.Drawing.Point(713, 33);
+            this.metroButton3.Location = new System.Drawing.Point(703, 33);
             this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(34, 23);
+            this.metroButton3.Size = new System.Drawing.Size(34, 22);
             this.metroButton3.Style = MetroFramework.MetroColorStyle.Black;
             this.metroButton3.TabIndex = 4;
             this.metroButton3.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -221,7 +221,6 @@
             this.metroButton2.Text = "Iniciar";
             this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButton2.UseSelectable = true;
-            
             // 
             // metroButton1
             // 
@@ -235,7 +234,6 @@
             this.metroButton1.TabIndex = 4;
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButton1.UseSelectable = true;
-            
             // 
             // metroLabel1
             // 
@@ -248,7 +246,20 @@
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "Caminho do Arquivo para Tratamento";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-         
+            // 
+            // chekDb
+            // 
+            this.chekDb.FormattingEnabled = true;
+            this.chekDb.ItemHeight = 23;
+            this.chekDb.Items.AddRange(new object[] {
+            "Postgres",
+            "MySql",
+            "Sql Server"});
+            this.chekDb.Location = new System.Drawing.Point(15, 136);
+            this.chekDb.Name = "chekDb";
+            this.chekDb.Size = new System.Drawing.Size(255, 29);
+            this.chekDb.TabIndex = 14;
+            this.chekDb.UseSelectable = true;
             // 
             // Form1
             // 
@@ -260,8 +271,7 @@
             this.Name = "Form1";
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Tratamento de CNPJ";
-            this.Theme = MetroFramework.MetroThemeStyle.Dark;
-           
+            this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();
             this.metroPanel1.ResumeLayout(false);
@@ -286,7 +296,7 @@
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        
+        private MetroFramework.Controls.MetroComboBox chekDb;
     }
 }
 

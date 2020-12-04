@@ -1,0 +1,48 @@
+CREATE TABLE cnpj.basecnpj
+(
+    id SMALLINT PRIMARY KEY AUTO_INCREMENT,
+    cnpj character varying(14),
+    identificador character varying(2),
+    nomeempresa character varying(150),
+    fantasia character varying(55),
+    situacaocadastral character varying(2),
+    datasituacao date,
+    motivosituacao character varying(2),
+    naturezajuridica character varying(4),
+    dataabertura date,
+    cnae character varying(8),
+    tipologradouro character varying(20),
+    endereco character varying(60),
+    complemento character varying(156),
+    cep character varying(8),
+    uf character varying(2),
+    cidade character varying(50),
+    telefone1 character varying(36),
+    numero character varying(6),
+    bairro character varying(50),
+    email character varying(115),
+    porte character varying(2),
+    qualificacaopessoaresp character varying(2),
+    capital character varying(14),
+    opcaosimples character varying(1),
+    dataopcaosimples date,
+    dataexclusaosimles date,
+    opcaomei character varying(1),
+    situacaoespecial character varying(23),
+    datasituacaoespecial date
+)
+
+
+CREATE TABLE cnaesecond
+(
+    id SMALLINT PRIMARY KEY AUTO_INCREMENT, 
+    cnpj character varying(14),
+    cnae character varying(8)
+)
+
+CREATE TABLE public.socio
+(
+    id SMALLINT PRIMARY KEY AUTO_INCREMENT, 
+    cnpj character varying(14),
+    socio character varying(150)
+)
